@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #092b33;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 14px;
+}
+
+.score {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  user-select: none;
+}
+
+.circle {
+  position: relative;
+}
+
+.circle button {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url(../assets/frog.png);
+  background-size: 200px;
+  border: none;
+}
+
+button:active {
+	width: 198px;
+    height: 198px;
+}

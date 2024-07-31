@@ -1,0 +1,56 @@
+﻿@page "/"
+
+@inject ISyncLocalStorageService _localstorage;
+
+<PageTitle>Donut Clicker</PageTitle>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css?v=0.1">
+</head>
+
+<body>
+    <div class="game">
+        <div class="header">
+            <img src="/assets/coin.png" alt="coin" />
+            <h2 class="score" id="score">@_currentCount</h2>
+        </div>
+        <div class="circle">
+            <button @onclick="IncrementCoinCount"></button>
+        </div>
+    </div>
+</body>
+
+@code {
+
+    private const string LocalStorageKey = "currentCoinCount";
+
+    private int _currentCount;
+
+    protected override void OnInitialized()
+    {
+        GetCoinCount();
+    }
+
+    private void GetCoinCount()
+    {
+        //If exists, just get it from localstorage
+        if (_localstorage.ContainKey(LocalStorageKey))
+        {
+            _currentCount = _localstorage.GetItem<int>(LocalStorageKey);
+        }
+        else
+        {
+            //Initialize it by 0 value
+            SetCoinCount(0);
+            _currentCount = 0;
+        }
+    }
+
+    private void SetCoinCount(int count) => _localstorage.SetItem<int>(LocalStorageKey, count);
+
+    private void IncrementCoinCount()
+    {
+        _currentCount++;
+        SetCoinCount(_currentCount);
+    }
+}
