@@ -5,17 +5,17 @@
 <PageTitle>Donut Clicker</PageTitle>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./css/styles.css?v=0.2">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css?v=0.7">
 </head>
 
 <body>
     <div class="game">
         <div class="header">
             <img src="assets/coin.png" alt="coin" />
-            <h2 class="score" id="score">@_currentCount</h2>
+            <h2 class="score" id="score">@CurrentCount</h2>
         </div>
         <div class="circle">
-            <button @onclick="IncrementCoinCount"></button>
+            <button class="@MyStyle" @onclick="IncrementCoinCount"></button>
         </div>
     </div>
 </body>
@@ -24,11 +24,13 @@
 
     private const string LocalStorageKey = "currentCoinCount";
 
-    private int _currentCount;
+    private int CurrentCount;
+    private string MyStyle = string.Empty;
 
     protected override void OnInitialized()
     {
         GetCoinCount();
+        MyStyle = GetImageStyle();
     }
 
     private void GetCoinCount()
@@ -36,13 +38,13 @@
         //If exists, just get it from localstorage
         if (_localstorage.ContainKey(LocalStorageKey))
         {
-            _currentCount = _localstorage.GetItem<int>(LocalStorageKey);
+            CurrentCount = _localstorage.GetItem<int>(LocalStorageKey);
         }
         else
         {
             //Initialize it by 0 value
             SetCoinCount(0);
-            _currentCount = 0;
+            CurrentCount = 0;
         }
     }
 
@@ -50,7 +52,39 @@
 
     private void IncrementCoinCount()
     {
-        _currentCount++;
-        SetCoinCount(_currentCount);
+        CurrentCount++;
+        SetCoinCount(CurrentCount);
+
+        if (ShouldChangeImageStyle())
+        {
+            MyStyle = GetImageStyle();
+            StateHasChanged();
+        }
+    }
+
+    private string GetImageStyle()
+    {
+        switch (CurrentCount)
+        {
+            case < 50:
+                return "btn-1";
+
+            case >= 50 and < 200:
+                return "btn-2"; 
+
+            default:
+                return "btn-1";
+        }
+    }
+
+    private bool ShouldChangeImageStyle()
+    {
+        switch (CurrentCount)
+        {
+            case 50:
+            case 200:
+                return true;
+        }
+        return false;
     }
 }

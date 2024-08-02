@@ -30,20 +30,24 @@ body {
   user-select: none;
 }
 
-.circle {
-  position: relative;
-}
-
 .circle button {
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-image: url(../assets/frog.png);
   background-size: 200px;
   border: none;
 }
 
+.btn-1 {
+    background-image: url(../assets/frog.png);
+}
+
+.btn-2 {
+    background-image: url(../assets/lizzard.png);
+}
+
 button:active {
-	width: 198px;
-    height: 198px;
+	width: 192px;
+    height: 192px;
 }
