@@ -25,6 +25,7 @@ body {
 .score {
   color: #fff;
   text-align: center;
+  font-family: 'Lato';
   font-size: 36px;
   font-weight: 800;
   user-select: none;
@@ -37,17 +38,49 @@ body {
   border-radius: 50%;
   background-size: 200px;
   border: none;
+  display: block;
+  margin: auto;
+}
+
+.circle button:active {
+	width: 192px;
+	height: 192px;
 }
 
 .btn-1 {
-    background-image: url(../assets/frog.png);
+	background-image: url(../assets/frog.png);
 }
 
 .btn-2 {
-    background-image: url(../assets/lizzard.png);
+	background-image: url(../assets/lizzard.png);
 }
 
-button:active {
-	width: 192px;
-    height: 192px;
+.restart {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.restart button {
+	background: #34495e;
+	color: #fff;
+	border: none;
+	font-family: 'Lato';
+	font-size: inherit;
+	cursor: pointer;
+	width: 200px;
+    height: 60px;
+	margin: auto;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: absolute;
+	transition: all 0.3s;
+	border-radius: 20px;
+	bottom: 20px;
+}
+
+.restart button:active {
+	background: #192736;
 }

@@ -5,7 +5,8 @@
 <PageTitle>Donut Clicker</PageTitle>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./css/styles.css?v=0.7">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css?v=1">
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato'>
 </head>
 
 <body>
@@ -17,7 +18,11 @@
         <div class="circle">
             <button class="@MyStyle" @onclick="IncrementCoinCount"></button>
         </div>
+        <div class="restart"
+            <button @onclick="ResetProgress">Reset</button>
+        </div>
     </div>
+   
 </body>
 
 @code {
@@ -86,5 +91,12 @@
                 return true;
         }
         return false;
+    }
+
+    private void ResetProgress()
+    {
+        CurrentCount = 0;
+        SetCoinCount(0);
+        OnInitialized();
     }
 }
