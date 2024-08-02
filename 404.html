@@ -5,14 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Clicker</title>
-    <base href="/DonutClicker/" /> 
+    <base href="/DonutClicker/" />
 </head>
 
 <body>
     <div id="app">
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js">
+    </script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand()
+    </script>
 </body>
-
 </html>
