@@ -12,7 +12,7 @@
 <body>
     <div class="game">
         <div class="header">
-            <img src="assets/coin.png" alt="coin" />
+            <img src="assets/icon.png" alt="icon" />
             <h2 class="score" id="score">@CurrentCount</h2>
         </div>
         <div class="circle">
@@ -74,11 +74,11 @@
             case < 50:
                 return "btn-1";
 
-            case >= 50 and < 200:
+            case >= 50 and < 100:
                 return "btn-2"; 
 
-            default:
-                return "btn-1";
+            case >= 100:
+                return "btn-3";
         }
     }
 
@@ -87,7 +87,7 @@
         switch (CurrentCount)
         {
             case 50:
-            case 200:
+            case 100:
                 return true;
         }
         return false;

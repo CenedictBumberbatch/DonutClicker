@@ -24,13 +24,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="wwwroot\assets\coin.png">
+    <Content Update="wwwroot\assets\Donut_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\frog.png">
+    <Content Update="wwwroot\assets\Donut_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Update="wwwroot\assets\lizzard.png">
+    <Content Update="wwwroot\assets\Donut_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\assets\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
