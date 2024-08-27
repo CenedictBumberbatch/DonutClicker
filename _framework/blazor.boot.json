@@ -1,7 +1,7 @@
 {
   "entryAssembly": "DonutClicker",
   "resources": {
-    "hash": "sha256-adXHhZtj0vVZGyiXrYwlSJzuuu+zyk/pzQNPN3kmTIA=",
+    "hash": "sha256-F3C3BPHgyF4QcffwkO6nmm9AUsrYvuy/5hAWRfx9QjE=",
     "runtime": {
       "dotnet.7.0.20.dwptlzpfyy.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
@@ -12,7 +12,7 @@
     },
     "assembly": {
       "Blazored.LocalStorage.dll": "sha256-xcO4wZtFwM5I9DIZf1sZpOdcsaTjw1HyqJ5AWciMDAk=",
-      "DonutClicker.dll": "sha256-sqY0HZu8ZmIUcMrwv02LirC/yv0GLlIKwmMM7xnwGlM=",
+      "DonutClicker.dll": "sha256-WZuQndqJYd91QUteQPLlhq1E9LwdLTlcrR83nk+v6qk=",
       "Microsoft.AspNetCore.Components.dll": "sha256-ApuA2wgeBsnt6L17K/FsijNIAlBJemVN+rrAMrfsCFU=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-ljlUmxprzRvYsE7Ajr3NqcOvU/TeTFmZq9wJIg7YEe4=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-CTAeLL+mh/O7nN95UB0+2osR7jLSPp1lJWcppfvHXvY=",
